@@ -20,3 +20,6 @@ task 5.
 
 task 6.
 "Imports operations, reads input, and prints result."
+
+task 7.
+"Prints #pythoniscool using the built-in print function."
