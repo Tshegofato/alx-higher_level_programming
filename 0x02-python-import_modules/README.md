@@ -14,3 +14,6 @@ task 3.
 
 task 4.
 "Imports the "hidden_4" module and prints its non-private names."
+
+task 5.
+"Imports variable a from variable_load_5.py and prints its value."
