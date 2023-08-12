@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-from calculator_1 import add, subtract, multiply, divide
 
+from calculator_1 import add, sub, mul, div
 
 a = 10
 b = 5
 
-print(add(a, b))
-print(subtract(a, b))
-print(multiply(a, b))
-print(divide(a, b))
+print(f"{a} + {b} = {add(a, b)}")
+print(f"{a} - {b} = {sub(a, b)}")
+print(f"{a} * {b} = {mul(a, b)}")
+print(f"{a} / {b} = {div(a, b)}")
