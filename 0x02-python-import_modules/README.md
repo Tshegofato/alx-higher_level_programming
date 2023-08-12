@@ -17,3 +17,6 @@ task 4.
 
 task 5.
 "Imports variable a from variable_load_5.py and prints its value."
+
+task 6.
+"Imports operations, reads input, and prints result."
