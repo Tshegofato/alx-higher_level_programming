@@ -11,3 +11,6 @@ task 2.
 
 task 3.
 "Adds integer arguments, shows sum, handles large values."
+
+task 4.
+"Imports the "hidden_4" module and prints its non-private names."
