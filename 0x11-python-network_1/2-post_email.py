@@ -1,28 +1,38 @@
 #!/usr/bin/python3
 """
-This script takes in a URL and an email, sends a POST request to the passed URL
-with the email as a parameter, and displays the body of the response (decoded in utf-8).
+This module sends a POST request to a given URL with an email parameter.
 """
 
+import sys
 import urllib.parse
 import urllib.request
-import sys
 
-def post_email(url, email):
+
+class PostEmail:
     """
-    Sends a POST request to the specified URL with the provided email.
-    Returns the decoded body of the response.
+    PostEmail class to handle sending email via POST request.
     """
-    data = urllib.parse.urlencode({'email': email}).encode('utf-8')
-    req = urllib.request.Request(url, data)
 
-    with urllib.request.urlopen(req) as response:
-        body = response.read().decode('utf-8')
-        return body
+    def send_post_request(self, url, email):
+        """
+        Sends a POST request to the specified URL with given email parameter.
+        """
+        data = urllib.parse.urlencode({'email': email}).encode('utf-8')
+        req = urllib.request.Request(url, data)
+        with urllib.request.urlopen(req) as response:
+            print(response.read().decode('utf-8'))
 
+
+# Usage example
 if __name__ == "__main__":
-    url = sys.argv[1]
-    email = sys.argv[2]
-    
-    result = post_email(url, email)
-    print(result)
+    # Example URL and email
+    example_url = "http://0.0.0.0:5050"
+    example_email = "test@test.com"
+
+    # Create an instance of the PostEmail class
+    post_email_instance = PostEmail()
+
+    # Send POST request
+    post_email_instance.send_post_request(
+        example_url, example_email
+    )
