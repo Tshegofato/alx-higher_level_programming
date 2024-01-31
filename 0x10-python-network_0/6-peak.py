@@ -21,13 +21,14 @@ def find_peak(A):
                 (mid == len(A) - 1 or A[mid + 1] <= A[mid])):
             return A[mid]
 
-        # If the left neighbor of mid is greater than the middle element,
+        # If the left neighbor of `mid` is greater than the middle element,
         # find the peak recursively in the left sublist
-if mid - 1 >= 0 and A[mid - 1] > A[mid]:
+        if mid - 1 >= 0 and A[mid - 1] > A[mid]:
             return recursive(A, left, mid - 1)
 
-        # If the right neighbor of mid is greater than the middle element,
+        # If the right neighbor of `mid` is greater than the middle element,
         # find the peak recursively in the right sublist
         return recursive(A, mid + 1, right)
 
-    return recursive(A)
+    return recursive(A)`:wq
+
