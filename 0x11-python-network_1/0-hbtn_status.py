@@ -1,3 +1,15 @@
-#!/bin/bash
-# takes in a URL, sends a request to that URL, and displays the size of the body of the response
-curl -sI "$1" | grep Content-Length | cut -d " " -f2
+#!/usr/bin/python3
+"""fetches https://alx-intranet.hbtn.io/status
+"""
+
+from urllib.request import urlopen
+
+
+if __name__ == '__main__':
+    with urlopen('https://alx-intranet.hbtn.io/status') as response:
+        body = response.read()
+
+        print('Body response:')
+        print('\t- type: {}'.format(type(body)))
+        print('\t- content: {}'.format(body))
+        print('\t- utf8 content: {}'.format(body.decode('utf-8')))
